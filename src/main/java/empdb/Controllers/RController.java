@@ -14,7 +14,7 @@ public class RController {
     @Autowired
     DataBaseService db;
 
-    @GetMapping("/")
+    @GetMapping("/home")
     public String home(){
         return "hello from the server";
     }

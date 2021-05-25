@@ -11,7 +11,7 @@ public class EmployeeNotFoundAdvice {
 
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(EmployeeNotFoundException.class)
-    public @ResponseBody ErrorInfo employeeNotFoundHandler(EmployeeNotFoundException ex) {
-        return new ErrorInfo(HttpStatus.BAD_REQUEST,ex.getMessage());
+    public @ResponseBody String employeeNotFoundHandler(EmployeeNotFoundException ex) {
+        return ex.getMessage();
     }
 }
